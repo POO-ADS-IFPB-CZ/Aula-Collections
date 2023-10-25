@@ -3,18 +3,17 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Queue<String> fila = new LinkedList<>();
+        Set<String> conjunto = new TreeSet<>();
 
-        fila.offer("João");
-        fila.offer("Maria");
-        fila.offer("Pedro");
+        conjunto.add("João");
+        conjunto.add("Maria");
+        conjunto.add("Pedro");
 
-        System.out.println("Primeiro da fila: "+fila.peek());
-
-        while (!fila.isEmpty()){
-            System.out.println(fila.poll());
+        for(String s: conjunto){
+            System.out.println(s);
         }
 
+        System.out.println(conjunto.contains("João"));
 
     }
 }
