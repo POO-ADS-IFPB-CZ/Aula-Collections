@@ -1,19 +1,18 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        Stack<String> pilha = new Stack<>();
-        pilha.push("João");
-        pilha.push("Maria");
-        pilha.push("Pedro");
+        Queue<String> fila = new LinkedList<>();
 
-        System.out.println("Topo da pilha: "+pilha.peek());
+        fila.offer("João");
+        fila.offer("Maria");
+        fila.offer("Pedro");
 
-        while(!pilha.empty()){
-            System.out.println(pilha.pop());
+        System.out.println("Primeiro da fila: "+fila.peek());
+
+        while (!fila.isEmpty()){
+            System.out.println(fila.poll());
         }
 
 
